@@ -21,7 +21,8 @@ return {
         conditional(null_ls.builtins.formatting.rubocop),
       },
     })
-
-    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+    vim.keymap.set("n", "<leader>gf", function()
+      vim.lsp.buf.format({ timeout_ms = 2000 })  -- Set timeout to 2000 milliseconds (2 seconds)
+    end, {})
   end,
 }
