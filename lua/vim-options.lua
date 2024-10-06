@@ -5,5 +5,6 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set number relativenumber")
 vim.g.mapleader= " "
 vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
+vim.cmd([[autocmd FileType ruby setlocal indentkeys-=.]])
 
 
